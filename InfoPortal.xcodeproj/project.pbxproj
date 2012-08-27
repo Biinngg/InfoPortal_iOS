@@ -10,6 +10,7 @@
 		9A50A06A15EAF96200386684 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50A06915EAF96200386684 /* Foundation.framework */; };
 		9A50A06F15EAF96200386684 /* InfoPortal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A50A06E15EAF96200386684 /* InfoPortal.h */; };
 		9A50A07115EAF96200386684 /* InfoPortal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07015EAF96200386684 /* InfoPortal.m */; };
+		9A50A07A15EAF9E500386684 /* IPDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07915EAF9E500386684 /* IPDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		9A50A06D15EAF96200386684 /* InfoPortal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfoPortal-Prefix.pch"; sourceTree = "<group>"; };
 		9A50A06E15EAF96200386684 /* InfoPortal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoPortal.h; sourceTree = "<group>"; };
 		9A50A07015EAF96200386684 /* InfoPortal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoPortal.m; sourceTree = "<group>"; };
+		9A50A07815EAF9E500386684 /* IPDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDatabase.h; sourceTree = "<group>"; };
+		9A50A07915EAF9E500386684 /* IPDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 		9A50A06B15EAF96200386684 /* InfoPortal */ = {
 			isa = PBXGroup;
 			children = (
+				9A50A07715EAF98400386684 /* IPDatabase */,
 				9A50A06E15EAF96200386684 /* InfoPortal.h */,
 				9A50A07015EAF96200386684 /* InfoPortal.m */,
 				9A50A06C15EAF96200386684 /* Supporting Files */,
@@ -86,6 +90,15 @@
 				9A50A06D15EAF96200386684 /* InfoPortal-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A50A07715EAF98400386684 /* IPDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				9A50A07815EAF9E500386684 /* IPDatabase.h */,
+				9A50A07915EAF9E500386684 /* IPDatabase.m */,
+			);
+			name = IPDatabase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A50A07115EAF96200386684 /* InfoPortal.m in Sources */,
+				9A50A07A15EAF9E500386684 /* IPDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
