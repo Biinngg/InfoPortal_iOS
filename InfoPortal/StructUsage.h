@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StructUsage : NSObject
+@interface StructUsage : NSObject {
+    long timeStamp;
+    NSArray *usageStatus;
+}
 
 @end
