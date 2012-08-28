@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StructResult : NSObject
+@interface StructResult : NSObject {
+    NSString *buildName;
+    NSArray *roomName;
+}
 
 @end
