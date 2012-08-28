@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
-@interface IPDatabase : NSObject
+@interface IPDatabase : NSObject {
+    NSString *path;
+}
+
+-(void) open;
+-(NSArray *) query: (NSString *) table selection:(NSArray *) columns: (NSString *) orderBy:(NSString *) limit;
+-(int) insert: (NSString *) table selection: (NSDictionary *) values;
+-(int) remove: (NSString *) table: (NSString *)selection;
+-(int) update: (NSString *) table selection: (NSDictionary *) values;
 
 @end

@@ -10,4 +10,10 @@
 
 @implementation IPDatabase
 
+-(void) open {
+    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    path = [documentsDirectory stringByAppendingPathComponent:@"infoportal.db" ];
+}
+
 @end
