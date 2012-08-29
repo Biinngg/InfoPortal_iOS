@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
-@interface IPDatabase : NSObject {
-    NSString *path;
-}
+@interface IPDatabase : NSObject
 
--(void) open;
--(NSArray *) query: (NSString *) table selection:(NSArray *) columns: (NSString *) orderBy:(NSString *) limit;
--(int) insert: (NSString *) table selection: (NSDictionary *) values;
+-(int) open;
+-(void) close;
+-(int) query: (NSString *) table:(NSArray *) columns: (NSString *)selection :(NSString *) orderBy:(NSString *) limit;
+-(NSArray *) moveToNext;
+-(int) insert: (NSString *) table: (NSDictionary *) values : (NSString *) selection;
 -(int) remove: (NSString *) table: (NSString *)selection;
--(int) update: (NSString *) table selection: (NSDictionary *) values;
+-(int) update: (NSString *) table: (NSDictionary *) values : (NSString *) selection;
 
 @end
