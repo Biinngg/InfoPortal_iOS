@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IPDatabase.h"
 /**
  * 用于为ClassView提供数据库访问方法。
  **/

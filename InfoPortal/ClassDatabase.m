@@ -9,4 +9,11 @@
 #import "ClassDatabase.h"
 
 @implementation ClassDatabase
+
+-(NSArray *) getBuild {
+    NSArray *array = [NSArray arrayWithObjects:@"name", nil];
+    IPDatabase *database = [IPDatabase alloc];
+    [database open];
+    [database query:@"cla_build" :array :nil :@"floor_num DESC" :nil];}
+
 @end
