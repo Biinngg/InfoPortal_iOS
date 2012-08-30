@@ -51,9 +51,12 @@
     }
     selectSql = [selectSql stringByAppendingString:@";"];
     const char *sqlSentence = [selectSql UTF8String];
+    NSLog(@"query sql", selectSql);
     if(sqlite3_prepare_v2(database, sqlSentence, -1, &statement, nil) == SQLITE_OK) {
+        NSLog(@"query success");
         return 1;
     } else {
+        NSLog(@"query fail");
         return 0;
     }
 }
