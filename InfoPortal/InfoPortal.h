@@ -10,4 +10,6 @@
 
 @interface InfoPortal : NSObject
 
+- (BOOL)application;
+
 @end
