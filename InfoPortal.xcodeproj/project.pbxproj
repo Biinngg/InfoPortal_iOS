@@ -13,7 +13,6 @@
 		9A50A07A15EAF9E500386684 /* IPDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07915EAF9E500386684 /* IPDatabase.m */; };
 		9AD2EBB215EC98EF00271A7A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD2EBB115EC98EF00271A7A /* libsqlite3.dylib */; };
 		9AD2EBB715ECA47C00271A7A /* ClassDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBB615ECA47C00271A7A /* ClassDatabase.m */; };
-		9AD2EBBA15ECABCA00271A7A /* ClassStruct.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBB915ECABCA00271A7A /* ClassStruct.m */; };
 		9AD2EBBE15ECAFC300271A7A /* StructResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBBD15ECAFC300271A7A /* StructResult.m */; };
 		9AD2EBC115ECB45700271A7A /* StructUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBC015ECB45700271A7A /* StructUsage.m */; };
 /* End PBXBuildFile section */
@@ -42,8 +41,6 @@
 		9AD2EBB115EC98EF00271A7A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9AD2EBB515ECA47C00271A7A /* ClassDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDatabase.h; sourceTree = "<group>"; };
 		9AD2EBB615ECA47C00271A7A /* ClassDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDatabase.m; sourceTree = "<group>"; };
-		9AD2EBB815ECABCA00271A7A /* ClassStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassStruct.h; sourceTree = "<group>"; };
-		9AD2EBB915ECABCA00271A7A /* ClassStruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassStruct.m; sourceTree = "<group>"; };
 		9AD2EBBC15ECAFC300271A7A /* StructResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructResult.h; sourceTree = "<group>"; };
 		9AD2EBBD15ECAFC300271A7A /* StructResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StructResult.m; sourceTree = "<group>"; };
 		9AD2EBBF15ECB45700271A7A /* StructUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructUsage.h; sourceTree = "<group>"; };
@@ -64,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A1267EA15EF007F00C88403 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AD2EBC215ECB6B200271A7A /* infoportal.db */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
 		9A50A05B15EAF96200386684 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +98,7 @@
 		9A50A06B15EAF96200386684 /* InfoPortal */ = {
 			isa = PBXGroup;
 			children = (
+				9A1267EA15EF007F00C88403 /* Files */,
 				9AD2EBB415ECA45800271A7A /* ClassView */,
 				9A50A07715EAF98400386684 /* IPDatabase */,
 				9A50A06E15EAF96200386684 /* InfoPortal.h */,
@@ -105,7 +111,6 @@
 		9A50A06C15EAF96200386684 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9AD2EBC215ECB6B200271A7A /* infoportal.db */,
 				9A50A06D15EAF96200386684 /* InfoPortal-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -126,8 +131,6 @@
 				9AD2EBBB15ECAEE200271A7A /* ClassStruct */,
 				9AD2EBB515ECA47C00271A7A /* ClassDatabase.h */,
 				9AD2EBB615ECA47C00271A7A /* ClassDatabase.m */,
-				9AD2EBB815ECABCA00271A7A /* ClassStruct.h */,
-				9AD2EBB915ECABCA00271A7A /* ClassStruct.m */,
 			);
 			name = ClassView;
 			sourceTree = "<group>";
@@ -197,7 +200,6 @@
 				9A50A07115EAF96200386684 /* InfoPortal.m in Sources */,
 				9A50A07A15EAF9E500386684 /* IPDatabase.m in Sources */,
 				9AD2EBB715ECA47C00271A7A /* ClassDatabase.m in Sources */,
-				9AD2EBBA15ECABCA00271A7A /* ClassStruct.m in Sources */,
 				9AD2EBBE15ECAFC300271A7A /* StructResult.m in Sources */,
 				9AD2EBC115ECB45700271A7A /* StructUsage.m in Sources */,
 			);
@@ -255,11 +257,13 @@
 		9A50A07515EAF96200386684 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/InfoPortal.dst;
+				DSTROOT = /Users/ustb/Documents/tmp/;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InfoPortal/InfoPortal-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -267,11 +271,13 @@
 		9A50A07615EAF96200386684 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/InfoPortal.dst;
+				DSTROOT = /Users/ustb/Documents/tmp/;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InfoPortal/InfoPortal-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
