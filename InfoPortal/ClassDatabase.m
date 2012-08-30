@@ -38,6 +38,21 @@
         NSArray *next = [database moveToNext];
         floorNum = [next objectAtIndex:0];
     }
+    return floorNum;
+}
+
+-(NSArray *)getTimes {
+    NSArray *result;
+    NSString *condition = @"period=1";
+    NSArray *array = [NSArray arrayWithObject:@"name"];
+    IPDatabase *database = [IPDatabase alloc];
+    [database open];
+    int status = [database query:@"cla_time":array:condition:nil:nil];
+    NSLog(@"status", [NSString stringWithFormat:@"%d", status]);
+    if(status == 1) {
+        result = [database moveToNext];
+    }
+    return result;
 }
 
 @end
