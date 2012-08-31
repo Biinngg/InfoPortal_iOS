@@ -17,4 +17,12 @@
     return [dater timeIntervalSince1970];
 }
 
+-(NSString *)getWeekName:(long)timeStamp {
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeStamp];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"en_US"]];
+    [formatter setDateFormat:@"EEE"];
+    return [formatter stringFromDate:date];
+}
+
 @end

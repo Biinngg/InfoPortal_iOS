@@ -12,4 +12,6 @@
 
 -(long)timeToStamp: (NSString *) date: (NSString *) format;
 
+-(NSString *)getWeekName: (long)timeStamp;
+
 @end
