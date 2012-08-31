@@ -126,6 +126,7 @@
         [columns addObject:str];
     }
     IPDatabase *database = [IPDatabase new];
+    [database open];
     IPDate *date = [IPDate new];
     for(int i=0;i<days;i++) {
         StructUsage *usage = [StructUsage new];
@@ -146,6 +147,7 @@
         usage->usageStatus = status;
         [result addObject:usage];
     }
+    [database close];
     return result;
 }
 
