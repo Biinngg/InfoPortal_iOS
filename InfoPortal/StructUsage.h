@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface StructUsage : NSObject {
+    @public
     long timeStamp;
     NSArray *usageStatus;
 }

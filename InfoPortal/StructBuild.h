@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StructBuild : NSObject
+@interface StructBuild : NSObject {
+    @public
+    int buildId;
+    NSString *buildName;
+}
 
 @end
