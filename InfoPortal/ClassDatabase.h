@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "IPDatabase.h"
+#import "StructBuild.h"
+#import "IPDate.h"
 /**
  * 用于为ClassView提供数据库访问方法。
  **/
@@ -20,11 +22,19 @@
 /**
  * 获得楼层数量
  **/
--(int) getFloor: (NSString *) buildName;
+-(int) getFloor: (int) buildId;
 /**
  * 获得节次
  **/
 -(NSArray *) getTimes;
+/**
+ * 获取开学时间
+ **/
+-(long) getTermStart;
+/**
+ * 获取学期结束时间
+ **/
+-(long) getTermEnd;
 /**
  * 获得连续几天的教室使用状况
  **/
