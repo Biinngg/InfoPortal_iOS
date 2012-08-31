@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "IPDatabase.h"
 #import "StructBuild.h"
+#import "StructUsage.h"
 #import "IPDate.h"
 /**
  * 用于为ClassView提供数据库访问方法。
@@ -36,9 +37,13 @@
  **/
 -(long) getTermEnd;
 /**
+ * 获取第几周
+ **/
+-(int) getWeekNum: (long) curTimeStamp;
+/**
  * 获得连续几天的教室使用状况
  **/
--(NSArray *) getUsage: (long) startTimeStamp : (int) days;
+-(NSArray *) getUsage:(int) buildId: (int) roomNum: (long) startTimeStamp : (int) days;
 /**
  * 获得教室搜索结果
  **/
