@@ -15,6 +15,8 @@
 		9AD2EBB715ECA47C00271A7A /* ClassDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBB615ECA47C00271A7A /* ClassDatabase.m */; };
 		9AD2EBBE15ECAFC300271A7A /* StructResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBBD15ECAFC300271A7A /* StructResult.m */; };
 		9AD2EBC115ECB45700271A7A /* StructUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBC015ECB45700271A7A /* StructUsage.m */; };
+		C113A60B15F05FCF00EC3480 /* IPDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C113A60A15F05FCF00EC3480 /* IPDate.m */; };
+		C11A4E2515EF8D0C002BAE91 /* StructBuild.m in Sources */ = {isa = PBXBuildFile; fileRef = C11A4E2415EF8D0C002BAE91 /* StructBuild.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +48,10 @@
 		9AD2EBBF15ECB45700271A7A /* StructUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructUsage.h; sourceTree = "<group>"; };
 		9AD2EBC015ECB45700271A7A /* StructUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StructUsage.m; sourceTree = "<group>"; };
 		9AD2EBC215ECB6B200271A7A /* infoportal.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = infoportal.db; sourceTree = "<group>"; };
+		C113A60915F05FCF00EC3480 /* IPDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDate.h; sourceTree = "<group>"; };
+		C113A60A15F05FCF00EC3480 /* IPDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDate.m; sourceTree = "<group>"; };
+		C11A4E2315EF8D0C002BAE91 /* StructBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructBuild.h; sourceTree = "<group>"; };
+		C11A4E2415EF8D0C002BAE91 /* StructBuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StructBuild.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		9A50A06B15EAF96200386684 /* InfoPortal */ = {
 			isa = PBXGroup;
 			children = (
+				C113A60715F05F9900EC3480 /* IPDate */,
 				9A1267EA15EF007F00C88403 /* Files */,
 				9AD2EBB415ECA45800271A7A /* ClassView */,
 				9A50A07715EAF98400386684 /* IPDatabase */,
@@ -142,8 +149,19 @@
 				9AD2EBBD15ECAFC300271A7A /* StructResult.m */,
 				9AD2EBBF15ECB45700271A7A /* StructUsage.h */,
 				9AD2EBC015ECB45700271A7A /* StructUsage.m */,
+				C11A4E2315EF8D0C002BAE91 /* StructBuild.h */,
+				C11A4E2415EF8D0C002BAE91 /* StructBuild.m */,
 			);
 			name = ClassStruct;
+			sourceTree = "<group>";
+		};
+		C113A60715F05F9900EC3480 /* IPDate */ = {
+			isa = PBXGroup;
+			children = (
+				C113A60915F05FCF00EC3480 /* IPDate.h */,
+				C113A60A15F05FCF00EC3480 /* IPDate.m */,
+			);
+			name = IPDate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +220,8 @@
 				9AD2EBB715ECA47C00271A7A /* ClassDatabase.m in Sources */,
 				9AD2EBBE15ECAFC300271A7A /* StructResult.m in Sources */,
 				9AD2EBC115ECB45700271A7A /* StructUsage.m in Sources */,
+				C11A4E2515EF8D0C002BAE91 /* StructBuild.m in Sources */,
+				C113A60B15F05FCF00EC3480 /* IPDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
