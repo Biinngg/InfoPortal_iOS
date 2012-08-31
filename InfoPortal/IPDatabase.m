@@ -74,8 +74,11 @@
         for(int i=0; i<columnSize; i++) {
             NSLog(@"moveToNext i=%d", i);
             const unsigned char *result = sqlite3_column_text(statement, i);
-            [array addObject:[NSString stringWithUTF8String:result]];
-            NSLog(@"moveToNext result=%@", [NSString stringWithUTF8String:result]);
+            NSString *resultStr = @"";
+            if(result != nil)
+                resultStr = [NSString stringWithUTF8String:result];
+            [array addObject:resultStr];
+            NSLog(@"moveToNext result=%@", resultStr);
         }
         return array;
     } else
