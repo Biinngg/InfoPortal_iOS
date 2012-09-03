@@ -12,6 +12,7 @@
     @public
     int buildId;
     NSString *buildName;
+    NSString *location;
 }
 
 @end
