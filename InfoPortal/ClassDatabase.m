@@ -25,7 +25,7 @@
 -(NSArray *) getBuild {
     NSMutableArray *result;
     result = [[NSMutableArray alloc] init];
-    NSArray *array = [NSArray arrayWithObjects:@"_id", @"name", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"_id", @"name", @"location", nil];
     IPDatabase *database = [IPDatabase new];
     [database open];
     int status = [database query:@"cla_build" :array :nil :@"floor_num DESC" :nil];
@@ -35,6 +35,7 @@
             StructBuild *build = [StructBuild new];
             build->buildId = [[next objectAtIndex:0] integerValue];
             build->buildName = [next objectAtIndex:1];
+            build->location = [next objectAtIndex:2];
             [result addObject:build];
             next = [database moveToNext];
         }
@@ -103,6 +104,7 @@
 }
 
 -(long)getTermEnd {
+    NSLog(@"getTermEnd");
     return [self getTermTime:@"end"];
 }
 
@@ -155,27 +157,26 @@
     int roomFrom = floorFrom * 100;
     int roomTo = (floorTo + 1) * 100;
     int weekNum = [self getWeekNum:timeStamp];
+    NSLog(@"weekNum=%d", weekNum);
     int binWeekNum = 1 << weekNum;
     NSMutableArray *result = [[NSMutableArray alloc] init];
     NSArray *array = [NSArray arrayWithObjects:@"build", @"room", nil];
     int n=1;
-    NSMutableArray *buildIndex = [[NSMutableArray alloc] init];
-    NSString *condition = @"";
+    NSString *condition = @"(";
     for(int i=1;i<=buildSelect;i=i<<1) {
-        if(i&&buildSelect != 0) {
+        if((i&buildSelect) != 0) {
             StructResult *structResult = [StructResult new];
-            structResult->buildId = &n;
+            structResult->buildId = n;
             structResult->roomName = [[NSMutableArray alloc] init];
             [result addObject: structResult];
-            [condition stringByAppendingFormat:@"build=%d or " , n];
-            [buildIndex addObject:[NSString stringWithFormat:@"%d",n]];
+            condition = [condition stringByAppendingFormat:@"build=%d or " , n];
         }
         n++;
     }
-    [condition substringToIndex:([condition length]-3)];
-    [condition stringByAppendingFormat:@"and room>%d and room<%d ", roomFrom, roomTo];
+    condition = [condition substringToIndex:([condition length]-3)];
+    condition = [condition stringByAppendingFormat:@")and room>%d and room<%d ", roomFrom, roomTo];
     for(int time = timesFrom; time <= timesTo; time++) {
-        [condition stringByAppendingFormat:@"and class%d & %d = %d ", time, binWeekNum, binWeekNum];
+        condition = [condition stringByAppendingFormat:@"and class%d & %d = %d ", time, binWeekNum, binWeekNum];
     }
     IPDate *date = [IPDate new];
     NSString *weekName = [date getWeekName:timeStamp];
@@ -185,11 +186,14 @@
     if(status == 1) {
         NSArray *next = [database moveToNext];
         while([next count] != 0) {
+            int value = [[next objectAtIndex:0] integerValue];
+            for(int i=0;i<[result count];i++) {
+                StructResult *sr = [result objectAtIndex:i];
+                if(sr->buildId == value) {
+                    [sr->roomName addObject:[next objectAtIndex:1]];
+                }
+            }
             next = [database moveToNext];
-            NSString *value = [next objectAtIndex:0];
-            int index = [buildIndex indexOfObject:value];
-            StructResult *sr = [result objectAtIndex:index];
-            [sr->roomName addObject:[next objectAtIndex:1]];
         }
     }
     [database close];
