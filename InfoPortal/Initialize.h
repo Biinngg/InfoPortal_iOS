@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface InfoPortal : NSObject
+@interface Initialize : NSObject
 
-- (BOOL)application;
+- (BOOL)checkAndCopy;
 
 @end

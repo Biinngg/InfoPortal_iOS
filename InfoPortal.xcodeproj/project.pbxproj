@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A50A06A15EAF96200386684 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50A06915EAF96200386684 /* Foundation.framework */; };
-		9A50A06F15EAF96200386684 /* InfoPortal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A50A06E15EAF96200386684 /* InfoPortal.h */; };
-		9A50A07115EAF96200386684 /* InfoPortal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07015EAF96200386684 /* InfoPortal.m */; };
+		9A50A06F15EAF96200386684 /* Initialize.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A50A06E15EAF96200386684 /* Initialize.h */; };
+		9A50A07115EAF96200386684 /* Initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07015EAF96200386684 /* Initialize.m */; };
 		9A50A07A15EAF9E500386684 /* IPDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07915EAF9E500386684 /* IPDatabase.m */; };
 		9AD2EBB215EC98EF00271A7A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD2EBB115EC98EF00271A7A /* libsqlite3.dylib */; };
 		9AD2EBB715ECA47C00271A7A /* ClassDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBB615ECA47C00271A7A /* ClassDatabase.m */; };
@@ -26,7 +26,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				9A50A06F15EAF96200386684 /* InfoPortal.h in CopyFiles */,
+				9A50A06F15EAF96200386684 /* Initialize.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +36,8 @@
 		9A50A06615EAF96200386684 /* libInfoPortal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInfoPortal.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A50A06915EAF96200386684 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9A50A06D15EAF96200386684 /* InfoPortal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfoPortal-Prefix.pch"; sourceTree = "<group>"; };
-		9A50A06E15EAF96200386684 /* InfoPortal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoPortal.h; sourceTree = "<group>"; };
-		9A50A07015EAF96200386684 /* InfoPortal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoPortal.m; sourceTree = "<group>"; };
+		9A50A06E15EAF96200386684 /* Initialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initialize.h; sourceTree = "<group>"; };
+		9A50A07015EAF96200386684 /* Initialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initialize.m; sourceTree = "<group>"; };
 		9A50A07815EAF9E500386684 /* IPDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDatabase.h; sourceTree = "<group>"; };
 		9A50A07915EAF9E500386684 /* IPDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDatabase.m; sourceTree = "<group>"; };
 		9AD2EBB115EC98EF00271A7A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -108,8 +108,8 @@
 				9A1267EA15EF007F00C88403 /* Files */,
 				9AD2EBB415ECA45800271A7A /* ClassView */,
 				9A50A07715EAF98400386684 /* IPDatabase */,
-				9A50A06E15EAF96200386684 /* InfoPortal.h */,
-				9A50A07015EAF96200386684 /* InfoPortal.m */,
+				9A50A06E15EAF96200386684 /* Initialize.h */,
+				9A50A07015EAF96200386684 /* Initialize.m */,
 				9A50A06C15EAF96200386684 /* Supporting Files */,
 			);
 			path = InfoPortal;
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A50A07115EAF96200386684 /* InfoPortal.m in Sources */,
+				9A50A07115EAF96200386684 /* Initialize.m in Sources */,
 				9A50A07A15EAF9E500386684 /* IPDatabase.m in Sources */,
 				9AD2EBB715ECA47C00271A7A /* ClassDatabase.m in Sources */,
 				9AD2EBBE15ECAFC300271A7A /* StructResult.m in Sources */,
