@@ -10,6 +10,7 @@
 #import "IPDatabase.h"
 #import "StructBuild.h"
 #import "StructUsage.h"
+#import "StructResult.h"
 #import "IPDate.h"
 /**
  * 用于为ClassView提供数据库访问方法。
