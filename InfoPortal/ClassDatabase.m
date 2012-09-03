@@ -151,4 +151,20 @@
     return result;
 }
 
+-(NSArray *) getResult:(long)buildSelect :(int)floorFrom: (int)floorTo:(int)timesFrom: (int)timesTo:(long)timeStamp {
+    int roomFrom = floorFrom * 100;
+    int roomTo = (floorTo + 1) * 100;
+    int n=1;
+    NSString *condition = @"";
+    for(int i=1;i<=buildSelect;i=i<<1) {
+        if(i&&buildSelect != 0) {
+            [condition stringByAppendingFormat:@"build=%d or " , n];
+        }
+        n++;
+    }
+    [condition substringToIndex:([condition length]-3)];
+    [condition stringByAppendingFormat:@"and room>%d and room<%d", roomFrom, roomTo];
+    
+}
+
 @end

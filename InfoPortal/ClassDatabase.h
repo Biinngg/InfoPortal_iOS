@@ -47,6 +47,6 @@
 /**
  * 获得教室搜索结果
  **/
--(NSArray *) getResult: (long) buildSelect: (int) floorFrom floorTo: (int) timesFrom timesTo: (long) timeStamp;
+-(NSArray *) getResult: (long) buildSelect: (int) floorFrom: (int)floorTo: (int) timesFrom: (int)timesTo: (long) timeStamp;
 
 @end
