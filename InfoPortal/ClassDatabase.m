@@ -154,6 +154,16 @@
 }
 
 -(NSArray *) getResult:(long)buildSelect :(int)floorFrom: (int)floorTo:(int)timesFrom: (int)timesTo:(long)timeStamp {
+    if(floorFrom > floorTo) {
+        int tmp = floorFrom;
+        floorFrom = floorTo;
+        floorTo = tmp;
+    }
+    if(timesFrom > timesTo) {
+        int tmp = timesFrom;
+        timesFrom = timesTo;
+        timesTo = tmp;
+    }
     int roomFrom = floorFrom * 100;
     int roomTo = (floorTo + 1) * 100;
     int weekNum = [self getWeekNum:timeStamp];
