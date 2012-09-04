@@ -11,6 +11,8 @@
 		9A50A06F15EAF96200386684 /* Initialize.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A50A06E15EAF96200386684 /* Initialize.h */; };
 		9A50A07115EAF96200386684 /* Initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07015EAF96200386684 /* Initialize.m */; };
 		9A50A07A15EAF9E500386684 /* IPDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A50A07915EAF9E500386684 /* IPDatabase.m */; };
+		9A6115EC15F581DB00BCB9C4 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6115EB15F581DB00BCB9C4 /* HttpClient.m */; };
+		9A6115EF15F58F2E00BCB9C4 /* HttpParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6115EE15F58F2E00BCB9C4 /* HttpParser.m */; };
 		9AD2EBB215EC98EF00271A7A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD2EBB115EC98EF00271A7A /* libsqlite3.dylib */; };
 		9AD2EBB715ECA47C00271A7A /* ClassDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBB615ECA47C00271A7A /* ClassDatabase.m */; };
 		9AD2EBBE15ECAFC300271A7A /* StructResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2EBBD15ECAFC300271A7A /* StructResult.m */; };
@@ -40,6 +42,10 @@
 		9A50A07015EAF96200386684 /* Initialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initialize.m; sourceTree = "<group>"; };
 		9A50A07815EAF9E500386684 /* IPDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDatabase.h; sourceTree = "<group>"; };
 		9A50A07915EAF9E500386684 /* IPDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDatabase.m; sourceTree = "<group>"; };
+		9A6115EA15F581DB00BCB9C4 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		9A6115EB15F581DB00BCB9C4 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		9A6115ED15F58F2E00BCB9C4 /* HttpParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpParser.h; sourceTree = "<group>"; };
+		9A6115EE15F58F2E00BCB9C4 /* HttpParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpParser.m; sourceTree = "<group>"; };
 		9AD2EBB115EC98EF00271A7A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9AD2EBB515ECA47C00271A7A /* ClassDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassDatabase.h; sourceTree = "<group>"; };
 		9AD2EBB615ECA47C00271A7A /* ClassDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassDatabase.m; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		9A50A06B15EAF96200386684 /* InfoPortal */ = {
 			isa = PBXGroup;
 			children = (
+				9A6115E815F5811200BCB9C4 /* IPHttp */,
 				C113A60715F05F9900EC3480 /* IPDate */,
 				9A1267EA15EF007F00C88403 /* Files */,
 				9AD2EBB415ECA45800271A7A /* ClassView */,
@@ -130,6 +137,17 @@
 				9A50A07915EAF9E500386684 /* IPDatabase.m */,
 			);
 			name = IPDatabase;
+			sourceTree = "<group>";
+		};
+		9A6115E815F5811200BCB9C4 /* IPHttp */ = {
+			isa = PBXGroup;
+			children = (
+				9A6115EA15F581DB00BCB9C4 /* HttpClient.h */,
+				9A6115EB15F581DB00BCB9C4 /* HttpClient.m */,
+				9A6115ED15F58F2E00BCB9C4 /* HttpParser.h */,
+				9A6115EE15F58F2E00BCB9C4 /* HttpParser.m */,
+			);
+			name = IPHttp;
 			sourceTree = "<group>";
 		};
 		9AD2EBB415ECA45800271A7A /* ClassView */ = {
@@ -222,6 +240,8 @@
 				9AD2EBC115ECB45700271A7A /* StructUsage.m in Sources */,
 				C11A4E2515EF8D0C002BAE91 /* StructBuild.m in Sources */,
 				C113A60B15F05FCF00EC3480 /* IPDate.m in Sources */,
+				9A6115EC15F581DB00BCB9C4 /* HttpClient.m in Sources */,
+				9A6115EF15F58F2E00BCB9C4 /* HttpParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
