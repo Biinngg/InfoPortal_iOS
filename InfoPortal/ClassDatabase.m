@@ -44,6 +44,21 @@
     return result;
 }
 
+-(NSString *) getBuildName: (int) buildId {
+    NSString *result;
+    IPDatabase *database = [IPDatabase new];
+    [database open];
+    NSString *condition = [NSString stringWithFormat:@"_id=%d", buildId];
+    NSArray *columns = [[NSArray alloc] initWithObjects:@"name", nil];
+    int status = [database query:@"cla_build" :columns :condition :nil :nil];
+    if(status == 1) {
+        NSArray *next = [database moveToNext];
+        result = [next objectAtIndex:0];
+    }
+    [database close];
+    return result;
+}
+
 -(int) getFloor:(int)buildId {
     int floorNum;
     NSString *condition = @"_id = ";

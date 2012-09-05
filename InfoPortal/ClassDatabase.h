@@ -22,6 +22,10 @@
  **/
 -(NSArray *) getBuild;
 /**
+ * 获得教学楼名
+ **/
+-(NSString *) getBuildName: (int) buildId;
+/**
  * 获得楼层数量
  **/
 -(int) getFloor: (int) buildId;
