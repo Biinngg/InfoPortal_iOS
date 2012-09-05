@@ -34,15 +34,20 @@
 }
 
 -(void)connection: (NSURLConnection *)connection didReceiveData:(NSData *)data {
+    HttpParser *parser = [HttpParser new];
+    NSString *result = [[NSString alloc] initWithData:data encoding:enc];
     NSLog(@"connection:");
-    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:enc]);
+    result = [NSString stringWithFormat:@"\u57ce"];
+    [parser decodeUnicode:result];
     [_data appendData:data];
-    [self setValue:[NSNumber numberWithBool:YES] forKey:@"isFinished"];
+    _request = nil;
+    //[self setValue:[NSNumber numberWithBool:YES] forKey:@"isFinished"];
 }
 
 -(void)connection: (NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"connection error");
-    [self setValue:[NSNumber numberWithBool:YES] forKey:@"isFinished"];
+    _request = nil;
+    //[self setValue:[NSNumber numberWithBool:YES] forKey:@"isFinished"];
 }
 
 + (BOOL):(NSString *)key {

@@ -33,6 +33,7 @@
  **/
 
 #import <Foundation/Foundation.h>
+#import "HttpParser.h"
 
 @interface HttpClient : NSOperation {
     NSURLRequest* _request;
