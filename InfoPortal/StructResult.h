@@ -10,7 +10,7 @@
 
 @interface StructResult : NSObject {
     @public
-    int *buildId;
+    int buildId;
     NSMutableArray *roomName;
 }
 
