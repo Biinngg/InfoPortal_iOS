@@ -10,6 +10,10 @@
 
 @interface HttpParser : NSObject
 
+-(NSString *) decodeUnicode: (NSString *) dataStr;
 
+-(NSString *) searchAllReplace: (NSString *) inString: (NSString *)src: (NSString *)dest;
+
+-(int) hexToInt: (NSString *)hexNumber;
 
 @end
